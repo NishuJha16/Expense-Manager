@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgone"
+    tools:context=".RegisterActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="198dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/app_logo" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:text="Create Your account"
+        android:textColor="#009688"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewAlertError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30dp"
+        android:backgroundTint="#F44336"
+        app:cardCornerRadius="8dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/errorTv"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="left"
+        android:textSize="14sp"
+        android:layout_marginEnd="30dp"
+        android:padding="5dp"
+        android:textColor="#FFF"
+        />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:id="@+id/cancelAlert"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_cancel"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewSuccess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30dp"
+        android:backgroundTint="#4CAF50"
+        app:cardCornerRadius="8dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/successTv"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="left"
+        android:layout_marginEnd="30dp"
+        android:textSize="14sp"
+        android:padding="5dp"
+        android:textColor="#FFF"
+        />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:id="@+id/cancelAlertSuccess"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_cancel"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/firstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:background="@drawable/edit_textbg"
+        android:ems="10"
+        android:hint="First Name"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:padding="12dp"
+        android:paddingLeft="10dp"
+        />
+
+    <EditText
+        android:id="@+id/lastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_textbg"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:hint="Last Name"
+        android:inputType="text"
+        android:padding="12dp"
+        android:paddingLeft="10dp" />
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/edit_textbg"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:layout_marginTop="10dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:paddingLeft="10dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/passwordd"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        app:hintEnabled="false"
+        app:hintAnimationEnabled="false">
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/edit_textbg"
+            android:ems="10"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:paddingLeft="10dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/confirm_passwordd"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        app:hintAnimationEnabled="false"
+        android:layout_marginTop="10dp"
+        app:hintEnabled="false"
+        >
+        <EditText
+            android:id="@+id/confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/edit_textbg"
+            android:ems="10"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:paddingLeft="10dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:backgroundTint="@color/teal_700"
+        android:layout_marginRight="30dp"
+        android:text=" I agree to the Terms and condition and privacy policy"
+        android:textColor="#009688"
+        android:textSize="18sp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signupbtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#009688"
+        android:gravity="center"
+        android:text="Sign Up"
+        android:textColor="@color/white"
+        android:textSize="19dp"
+        app:cornerRadius="40dp" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? "
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:gravity="end"
+            android:layout_weight="0.5"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/signingoogle"
+            app:layout_constraintStart_toStartOf="@+id/signingoogle"
+            app:layout_constraintTop_toBottomOf="@+id/signingoogle" />
+
+        <TextView
+            android:id="@+id/loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.5"
+            android:textColor="#009688"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
